@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: Launch 3 Amazon EC2 instances in an existing VPC and subnet (us-east-2)
+Description: Launch 2 Amazon EC2 instances in an existing VPC and subnet (us-east-2)
 
 Parameters:
   VpcId:
@@ -29,18 +29,7 @@ Parameters:
     Description: Name of an existing EC2 key pair for SSH access
 
 Resources:
- # EC2Instance1:
-   # Type: AWS::EC2::Instance
-    #Properties:
-     # InstanceType: !Ref InstanceType
-      #ImageId: !Ref AmiId
-      #SubnetId: !Ref SubnetId
-      #KeyName: !Ref KeyName
-      #Tags:
-       # - Key: Name
-          #Value: EC2-Instance-1
-
-  EC2Instance2:
+  EC2Instance1:
     Type: AWS::EC2::Instance
     Properties:
       InstanceType: !Ref InstanceType
@@ -51,7 +40,7 @@ Resources:
         - Key: Name
           Value: ac-it-webserver-one
 
-  EC2Instance3:
+  EC2Instance2:
     Type: AWS::EC2::Instance
     Properties:
       InstanceType: !Ref InstanceType
@@ -62,14 +51,11 @@ Resources:
         - Key: Name
           Value: ac-it-webserver-two
 
-# Instance1Id:
-    #Description: EC2 Instance ID #1
-    #Value: !Ref EC2Instance1
+Outputs:
+  Instance1Id:
+    Description: EC2 Instance ID #1
+    Value: !Ref EC2Instance1
 
   Instance2Id:
     Description: EC2 Instance ID #2
     Value: !Ref EC2Instance2
-
-  Instance3Id:
-    Description: EC2 Instance ID #3
-    Value: !Ref EC2Instance3
