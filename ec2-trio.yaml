@@ -18,6 +18,7 @@ Parameters:
       - t3.small
       - t3.medium
       - t2.micro
+      - t3.xlarge
     Description: EC2 instance type
 
   AmiId:
