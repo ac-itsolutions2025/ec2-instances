@@ -28,17 +28,17 @@ Parameters:
     Type: AWS::EC2::KeyPair::KeyName
     Description: Name of an existing EC2 key pair for SSH access
 
-Resources:
-  EC2Instance1:
-    Type: AWS::EC2::Instance
-    Properties:
-      InstanceType: !Ref InstanceType
-      ImageId: !Ref AmiId
-      SubnetId: !Ref SubnetId
-      KeyName: !Ref KeyName
-      Tags:
-        - Key: Name
-          Value: EC2-Instance-1
+#Resources:
+ # EC2Instance1:
+   # Type: AWS::EC2::Instance
+    #Properties:
+     # InstanceType: !Ref InstanceType
+      #ImageId: !Ref AmiId
+      #SubnetId: !Ref SubnetId
+      #KeyName: !Ref KeyName
+      #Tags:
+       # - Key: Name
+          #Value: EC2-Instance-1
 
   EC2Instance2:
     Type: AWS::EC2::Instance
@@ -49,7 +49,7 @@ Resources:
       KeyName: !Ref KeyName
       Tags:
         - Key: Name
-          Value: EC2-Instance-2
+          Value: ac-it-webserver-one
 
   EC2Instance3:
     Type: AWS::EC2::Instance
@@ -60,12 +60,11 @@ Resources:
       KeyName: !Ref KeyName
       Tags:
         - Key: Name
-          Value: EC2-Instance-3
+          Value: ac-it-webserver-two
 
-Outputs:
-  Instance1Id:
-    Description: EC2 Instance ID #1
-    Value: !Ref EC2Instance1
+# Instance1Id:
+    #Description: EC2 Instance ID #1
+    #Value: !Ref EC2Instance1
 
   Instance2Id:
     Description: EC2 Instance ID #2
