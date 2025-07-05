@@ -28,7 +28,7 @@ Parameters:
     Type: AWS::EC2::KeyPair::KeyName
     Description: Name of an existing EC2 key pair for SSH access
 
-#Resources:
+Resources:
  # EC2Instance1:
    # Type: AWS::EC2::Instance
     #Properties:
