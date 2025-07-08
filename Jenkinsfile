@@ -11,7 +11,7 @@ pipeline {
     SUBNET_ID      = 'subnet-0cb91aa4bd49ae30f'
     KEY_NAME       = 'ec2-user'         // must exist in us-east-2
     AMI_ID         = 'ami-0c803b171269e2d72'      // Amazon Linux 2 in us-east-2 (verify)
-    INSTANCE_TYPE  = 't2.medium'
+    INSTANCE_TYPE  = 't3.medium'
   }
 
   options {
