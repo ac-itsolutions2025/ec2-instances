@@ -7,8 +7,8 @@ pipeline {
     REGION         = 'us-east-2'
 
     // Replace these with real values or pass via Jenkins parameters
-    VPC_ID         = ' vpc-00bcc95cee881c7d0'
-    SUBNET_ID      = 'subnet-0e968b062ffea363a'
+    VPC_ID         = ' vpc-0a4adde1cad005409'
+    SUBNET_ID      = 'subnet-0cb91aa4bd49ae30f'
     KEY_NAME       = 'ec2-user'         // must exist in us-east-2
     AMI_ID         = 'ami-0c803b171269e2d72'      // Amazon Linux 2 in us-east-2 (verify)
     INSTANCE_TYPE  = 't3.xlarge'
